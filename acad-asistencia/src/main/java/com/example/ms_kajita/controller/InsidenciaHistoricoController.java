@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/asistencias")
-public class AsistenciaController {
+public class InsidenciaHistoricoController {
 
     @Autowired
     private InsidenciaHistoricoService insidenciaHistoricoService;

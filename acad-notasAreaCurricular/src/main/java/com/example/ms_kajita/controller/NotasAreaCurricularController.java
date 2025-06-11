@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/notasAreaCurriculars") // Ruta base para los endpoints de NotasAreaCurricular
-public class LibretaNotasController {
+public class NotasAreaCurricularController {
 
     @Autowired
     private NotasAreaCurricularService notasAreaCurricularService;
