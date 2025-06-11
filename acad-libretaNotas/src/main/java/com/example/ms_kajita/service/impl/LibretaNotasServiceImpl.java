@@ -65,7 +65,7 @@ public class LibretaNotasServiceImpl implements LibretaNotasService {
         Optional<LibretaNotas> libretaOptional = libretaNotasRepository.findById(id);
         if (libretaOptional.isPresent()) {
             LibretaNotas libretaNotas = libretaOptional.get();
-            libretaNotas.setCodigoMatricula(obtenerMatricula(libretaNotas.getIdMatricula().intValue()));
+            libretaNotas.setCodigoMatricula(obtenerMatricula(libretaNotas.getIdMatricula()));
             libretaNotas.setNota(obtenerLibretaNota(libretaNotas.getIdLibretaNotas()));
             libretaNotas.setNotaFinal(obtenerLibretaNota(libretaNotas.getIdLibretaNotas()));
             libretaNotas.setIdPlanAcademico(obtenerLibretaPlanAcad(libretaNotas.getIdLibretaNotas()));

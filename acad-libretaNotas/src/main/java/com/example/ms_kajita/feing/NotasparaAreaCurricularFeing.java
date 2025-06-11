@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 
-@FeignClient(name = "acad-notasparaAreaCurricular-service", path = "/notasCompetencias")
+@FeignClient(name = "acad-notasAreaCurricular-service", path = "/api/notasAreaCurriculars")
 public interface NotasparaAreaCurricularFeing {
 
     @GetMapping("/{id}")
