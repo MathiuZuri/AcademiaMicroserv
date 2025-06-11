@@ -22,26 +22,26 @@ public class AsistenciaSeeder implements CommandLineRunner {
             Asistencia a1 = new Asistencia();
             a1.setFechaRegistroAsistencia(LocalDateTime.now());
             a1.setUsuarioIdUsuario(1L);
-            a1.setCursoIdCurso(101);
-            a1.setDocenteIdDocente(201);
+            a1.setCursoIdCurso(1);
+            a1.setDocenteIdDocente(4);
             a1.setEstadoAsistencia("PRESENTE");
-            a1.setPlanAcademicoIdPlanAcademico(301);
+            a1.setPlanAcademicoIdPlanAcademico(7);
 
             Asistencia a2 = new Asistencia();
             a2.setFechaRegistroAsistencia(LocalDateTime.now().minusDays(1));
             a2.setUsuarioIdUsuario(2L);
-            a2.setCursoIdCurso(102);
-            a2.setDocenteIdDocente(202);
+            a2.setCursoIdCurso(2);
+            a2.setDocenteIdDocente(5);
             a2.setEstadoAsistencia("AUSENTE");
-            a2.setPlanAcademicoIdPlanAcademico(302);
+            a2.setPlanAcademicoIdPlanAcademico(8);
 
             Asistencia a3 = new Asistencia();
             a3.setFechaRegistroAsistencia(LocalDateTime.now().minusDays(2));
             a3.setUsuarioIdUsuario(3L);
-            a3.setCursoIdCurso(103);
-            a3.setDocenteIdDocente(203);
+            a3.setCursoIdCurso(3);
+            a3.setDocenteIdDocente(6);
             a3.setEstadoAsistencia("TARDANZA");
-            a3.setPlanAcademicoIdPlanAcademico(303);
+            a3.setPlanAcademicoIdPlanAcademico(9);
 
             asistenciaRepository.save(a1);
             asistenciaRepository.save(a2);

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ad29728c-6cfa-4c33-8b36-9b0f772816b8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../acad-antecedenteMedico-service/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-antecedenteMedico-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-antecedenteMedico-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-antecedenteMedico-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-antecedenteMedico-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-antecedenteMedico-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-antecedenteMedico-service/src/main/java/com/acad/antecedentemedicoservice/AcadAntecedenteMedicoServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-antecedenteMedico-service/src/main/java/com/acad/antecedentemedicoservice/Configuration/OpenApiConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-antecedenteMedico-service/src/main/java/com/acad/antecedentemedicoservice/Controller/AntecedenteMedicoControlador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-antecedenteMedico-service/src/main/java/com/acad/antecedentemedicoservice/Entity/AntecedenteMedico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-antecedenteMedico-service/src/main/java/com/acad/antecedentemedicoservice/Repository/AntecedenteMedicoRepositorio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-antecedenteMedico-service/src/main/java/com/acad/antecedentemedicoservice/Service/AntecedenteMedicoServicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-antecedenteMedico-service/src/main/java/com/acad/antecedentemedicoservice/Service/ServiceImpl/AntecedenteMedicoServicioImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-antecedenteMedico-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-antecedenteMedico-service/src/test/java/com/acad/antecedentemedicoservice/AcadAntecedenteMedicoServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-apoderado-service/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-apoderado-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-apoderado-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-apoderado-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-apoderado-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-apoderado-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-apoderado-service/src/main/java/com/acad/apoderadoservice/AcadApoderadoServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-apoderado-service/src/main/java/com/acad/apoderadoservice/Configuration/OpenApiConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-apoderado-service/src/main/java/com/acad/apoderadoservice/Controller/ApoderadoControlador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-apoderado-service/src/main/java/com/acad/apoderadoservice/Entity/Apoderado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-apoderado-service/src/main/java/com/acad/apoderadoservice/Repository/ApoderadoRepositorio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-apoderado-service/src/main/java/com/acad/apoderadoservice/Service/ApoderadoServicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-apoderado-service/src/main/java/com/acad/apoderadoservice/Service/ServiceImpl/ApoderadoServicioImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-apoderado-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-apoderado-service/src/test/java/com/acad/apoderadoservice/AcadApoderadoServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-asistencia/src/main/java/com/example/ms_kajita/service/AsistenciaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../acad-asistencia/src/main/java/com/example/ms_kajita/service/AsistenciaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad-registry-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../acad-registry-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/acad/requisitoservice/AcadRequisitoServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/acad/requisitoservice/Configuration/OpenApiConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/acad/requisitoservice/Controller/RequisitoControlador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/acad/requisitoservice/Dto/AntecedenteMedicoDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/acad/requisitoservice/Dto/ApoderadoDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/acad/requisitoservice/Entity/Requisito.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/acad/requisitoservice/Feign/AntecedenteMedicoFeign.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/acad/requisitoservice/Feign/ApoderadoFeign.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/acad/requisitoservice/Repository/RequisitoRepositorio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/acad/requisitoservice/Service/RequisitoServicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/acad/requisitoservice/Service/ServiceImpl/RequisitoServicioImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/acad/requisitoservice/AcadRequisitoServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config-data/acad-antecedenteMedico-service.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config-data/acad-apoderado-service.yml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MathiuZuri"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MathiuZuri/AcademiaMicroserv.git",
+    "accountId": "c9fcdb9e-f484-4b65-9ab2-e0276ec9fd3f"
+  }
+}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2yKwGPz6OuvtCExQ8QZpSie9aXr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "J:/aplicaiones distribuidas/elvi/Proyecto2Modelo1.0-master/acad-libretaNotas",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="AcadRequisitoServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="acad-requisito-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.acad.requisitoservice.AcadRequisitoServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ad29728c-6cfa-4c33-8b36-9b0f772816b8" name="Changes" comment="" />
+      <created>1749596476355</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749596476355</updated>
+      <workItem from="1749596477408" duration="4136000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

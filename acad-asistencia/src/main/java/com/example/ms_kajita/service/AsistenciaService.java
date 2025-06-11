@@ -1,7 +1,6 @@
 package com.example.ms_kajita.service;
 
 import com.example.ms_kajita.entity.Asistencia;
-import com.example.ms_kajita.entity.Producto;
 
 import java.util.List;
 import java.util.Optional;
