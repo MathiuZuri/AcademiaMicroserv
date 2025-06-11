@@ -15,7 +15,7 @@ public interface MatriculaFeing {
     @CircuitBreaker(name = "MatriculaPorIdCB", fallbackMethod = "fallbackMatriculaById")
     public ResponseEntity<MatriculaDto> buscarMatricula(@PathVariable Integer id);
 
-    default ResponseEntity<MatriculaDto> fallbackCursoById(Integer id, Exception e) {
+    default ResponseEntity<MatriculaDto> fallbackMatriculaById(Integer id, Exception e) {
         MatriculaDto matriculaDto = new MatriculaDto();
         matriculaDto.setCodigoMatricula("Servicio no disponible de curso");
         return ResponseEntity.ok(matriculaDto);

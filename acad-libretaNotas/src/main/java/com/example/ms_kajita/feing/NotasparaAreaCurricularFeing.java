@@ -15,7 +15,7 @@ public interface NotasparaAreaCurricularFeing {
     @CircuitBreaker(name = "notasparaAreaCurricularPorIdCB", fallbackMethod = "fallbackNotasparaAreaCurricularById")
     public ResponseEntity<NotasparaAreaCurricularDto> buscarnotasparaAreaCurricular(@PathVariable Integer id);
 
-    default ResponseEntity<NotasparaAreaCurricularDto> fallbackDocenteById(Integer id, Exception e) {
+    default ResponseEntity<NotasparaAreaCurricularDto> fallbackNotasparaAreaCurricularById(Integer id, Exception e) {
         NotasparaAreaCurricularDto notasparaAreaCurricularDto = new NotasparaAreaCurricularDto();
         notasparaAreaCurricularDto.setNota("Servicio no disponible de nota");
         notasparaAreaCurricularDto.setNotaFinal("Servicio no disponible de nota final");

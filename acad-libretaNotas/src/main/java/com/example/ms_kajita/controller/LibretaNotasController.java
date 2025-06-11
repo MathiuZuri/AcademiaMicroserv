@@ -32,20 +32,15 @@ public class LibretaNotasController {
 
     @PostMapping
     public ResponseEntity<LibretaNotas> guardar(@RequestBody LibretaNotas libretaNotas) {
-        // En tu servicio, asumes que libretaNotas tiene IdMatricula, etc., para enriquecerse.
-        // Asegúrate de que el DTO/Entidad que llega aquí tiene los IDs necesarios.
         LibretaNotas nuevaLibretaNotas = libretaNotasService.guardar(libretaNotas);
         return ResponseEntity.status(HttpStatus.CREATED).body(nuevaLibretaNotas); // Código 201 Created es más apropiado para POST
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<LibretaNotas> actualizar(@PathVariable Integer id, @RequestBody LibretaNotas libretaNotas) {
-        // Primero, verifica si la libreta existe para asegurar que se está actualizando y no creando una nueva.
-        // También puedes manejar esta validación dentro del servicio si lo prefieres.
         if (!libretaNotasService.listarPorId(id).isPresent()) {
             return ResponseEntity.notFound().build();
         }
-        // Asegura que el ID de la entidad a actualizar sea el del PathVariable
         libretaNotas.setIdLibretaNotas(id); // Asumo que el campo ID de LibretaNotas es 'idLibretaNotas'
         LibretaNotas libretaActualizada = libretaNotasService.actualizar(libretaNotas);
         return ResponseEntity.ok(libretaActualizada);
@@ -53,7 +48,6 @@ public class LibretaNotasController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable Integer id) {
-        // Verifica si la libreta existe antes de intentar eliminarla
         if (!libretaNotasService.listarPorId(id).isPresent()) {
             return ResponseEntity.notFound().build();
         }
