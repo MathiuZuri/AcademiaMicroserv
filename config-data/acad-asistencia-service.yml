@@ -13,7 +13,7 @@ spring:
   #  driver-class-name: com.mysql.cj.jdbc.Driver
 
   datasource:
-    url: jdbc:h2:mem:acad-asistencia
+    url: jdbc:h2:mem:acad-asistencia-service
     driver-class-name: org.h2.Driver
     username: sa
     password: password

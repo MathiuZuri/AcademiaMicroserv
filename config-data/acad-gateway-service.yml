@@ -18,11 +18,23 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: acad-asistencia-service
+        - id: asistencia-route
           uri: lb://acad-asistencia-service
           predicates:
             - Path=/api/asistencias/**
+          filters:
+            - AuthFilter
+
+        - id: asistenciaHistorico-route
+          uri: lb://acad-asistencia-service
+          predicates:
             - Path=/api/asistenciaHistoricos/**
+          filters:
+            - AuthFilter
+
+        - id: libretasNotas-route
+          uri: lb://acad-asistencia-service
+          predicates:
             - Path=/api/libretasNotas/**
           filters:
             - AuthFilter
