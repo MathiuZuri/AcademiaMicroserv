@@ -1,8 +1,11 @@
 package com.example.ms_kajita.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 
 @Data
@@ -60,6 +63,16 @@ public class NotasAreaCurricular {
                 '}';
     }
 
+    public NotasAreaCurricular(Integer idNotascompetencia, Integer nota, Integer notaFinal, Integer idPlanAcademico, String nombrePlanAcad, List<NotaCurso> cursosNotas, List<CursoCompetencia> notasCompetencias) {
+        this.idNotascompetencia = idNotascompetencia;
+        this.nota = nota;
+        this.notaFinal = notaFinal;
+        this.idPlanAcademico = idPlanAcademico;
+        this.nombrePlanAcad = nombrePlanAcad;
+        this.cursosNotas = cursosNotas;
+        this.notasCompetencias = notasCompetencias;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idNotascompetencia")
@@ -73,14 +86,34 @@ public class NotasAreaCurricular {
     private Integer idPlanAcademico;
     @Transient
     private String nombrePlanAcad;
+    @OneToMany(mappedBy = "notasAreaCurricular", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
+    private List<NotaCurso> cursosNotas;
 
-    public NotasAreaCurricular(Integer idNotascompetencia, Integer nota, Integer notaFinal, Integer idPlanAcademico, String nombrePlanAcad) {
-        this.idNotascompetencia = idNotascompetencia;
-        this.nota = nota;
-        this.notaFinal = notaFinal;
-        this.idPlanAcademico = idPlanAcademico;
-        this.nombrePlanAcad = nombrePlanAcad;
+    @OneToMany(mappedBy = "notasCompetencias", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
+    private List<CursoCompetencia> notasCompetencias;
+
+    public List<CursoCompetencia> getNotasCompetencias() {
+        return notasCompetencias;
     }
+
+    public void setNotasCompetencias(List<CursoCompetencia> notasCompetencias) {
+        this.notasCompetencias = notasCompetencias;
+    }
+
+
+
+    public List<NotaCurso> getCursosNotas() {
+        return cursosNotas;
+    }
+
+    public void setCursosNotas(List<NotaCurso> cursosNotas) {
+        this.cursosNotas = cursosNotas;
+    }
+
+
+
 
     public NotasAreaCurricular() {
 

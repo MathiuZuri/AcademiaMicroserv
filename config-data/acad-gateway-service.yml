@@ -18,28 +18,18 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: acad-apoderado-service
-          uri: lb://acad-apoderado-service
+        - id: acad-asistencia-service
+          uri: lb://acad-asistencia-service
           predicates:
-            - Path=/apoderados/**
+            - Path=/api/asistencias/**
+            - Path=/api/asistenciaHistoricos/**
+            - Path=/api/libretasNotas/**
           filters:
             - AuthFilter
 
-        - id: acad-antecedenteMedico-service
-          uri: lb://acad-antecedenteMedico-service
+        - id: acad-notasAreaCurricular-service
+          uri: lb://acad-notasAreaCurricular-service
           predicates:
-            - Path=/antecedentes-medicos/**
+            - Path=/api/notasAreaCurriculars/**
           filters:
             - AuthFilter
-
-        - id: acad-requisito-service
-          uri: lb://acad-requisito-service
-          predicates:
-            - Path=/requisitos/**
-          filters:
-            - AuthFilter
-
-        - id: acad-auth-service
-          uri: lb://acad-auth-service
-          predicates:
-            - Path=/auth/**

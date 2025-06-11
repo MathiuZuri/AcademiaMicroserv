@@ -13,7 +13,7 @@ public class OpenApiConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("OPEN API MICROSERVICIO Asistencia")
+                        .title("OPEN API MICROSERVICIO")
                         .version("0.0.1")
                         .description("servicios web producto")
                         .termsOfService("http://swagger.io/terms")

@@ -1,7 +1,11 @@
 package com.example.ms_kajita.service.impl;
 
+import com.example.ms_kajita.dto.CompetenciaDto;
+import com.example.ms_kajita.dto.CursoDto;
 import com.example.ms_kajita.dto.PlanAcademicoDto;
 import com.example.ms_kajita.entity.NotasAreaCurricular;
+import com.example.ms_kajita.feing.CompetenciaFeing;
+import com.example.ms_kajita.feing.CursoFeing;
 import com.example.ms_kajita.feing.PlanAcademicoFeing;
 import com.example.ms_kajita.service.NotasAreaCurricularService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +20,13 @@ public class NotasAreaCurricularServiceImpl implements NotasAreaCurricularServic
 
     @Autowired
     private PlanAcademicoFeing planAcademicoFeing;
+
+    @Autowired
+    private CursoFeing cursoFeing;
+
+    @Autowired
+    private CompetenciaFeing competenciaFeing;
+
     @Autowired
     private com.example.ms_kajita.repository.notasAreaCurricularRepository notasAreaCurricularRepository;
 
@@ -25,29 +36,61 @@ public class NotasAreaCurricularServiceImpl implements NotasAreaCurricularServic
                 .map(notasAreaCurricular -> {
                     notasAreaCurricular.setNombrePlanAcad(obtenerPlanAcad(notasAreaCurricular.getIdPlanAcademico()));
 
+                    if (notasAreaCurricular.getCursosNotas() != null) {
+                        notasAreaCurricular.getCursosNotas().forEach(notaCurso ->
+                                notaCurso.setNombreCurso(obtenerNombreCurso(notaCurso.getIdCurso()))
+                        );
+                    }
+
+                    if (notasAreaCurricular.getNotasCompetencias() != null) {
+                        notasAreaCurricular.getNotasCompetencias().forEach(cursoCompetencia ->
+                                cursoCompetencia.setNombreCompetencia(obtenerNombreCompetencia(cursoCompetencia.getIdCompetenciaCurso()))
+                        );
+                    }
+
                     return notasAreaCurricular;
                 })
                 .collect(Collectors.toList());
     }
 
-
     @Override
     public NotasAreaCurricular guardar(NotasAreaCurricular notasAreaCurricular) {
-        NotasAreaCurricular notasCurricularGuardada = notasAreaCurricularRepository.save(notasAreaCurricular);
+        NotasAreaCurricular guardada = notasAreaCurricularRepository.save(notasAreaCurricular);
+        guardada.setNombrePlanAcad(obtenerPlanAcad(guardada.getIdPlanAcademico()));
 
-        notasCurricularGuardada.setNombrePlanAcad(obtenerPlanAcad(notasAreaCurricular.getIdPlanAcademico()));
+        if (guardada.getCursosNotas() != null) {
+            guardada.getCursosNotas().forEach(notaCurso ->
+                    notaCurso.setNombreCurso(obtenerNombreCurso(notaCurso.getIdCurso()))
+            );
+        }
 
-        return notasAreaCurricular;
+        if (guardada.getNotasCompetencias() != null) {
+            guardada.getNotasCompetencias().forEach(cursoCompetencia ->
+                    cursoCompetencia.setNombreCompetencia(obtenerNombreCompetencia(cursoCompetencia.getIdCompetenciaCurso()))
+            );
+        }
+
+        return guardada;
     }
 
     @Override
     public NotasAreaCurricular actualizar(NotasAreaCurricular notasAreaCurricular) {
-        NotasAreaCurricular notasCurrilarActualizada = notasAreaCurricularRepository.save(notasAreaCurricular);
-        NotasAreaCurricular notasCurricularGuardada = notasAreaCurricularRepository.save(notasAreaCurricular);
+        NotasAreaCurricular actualizada = notasAreaCurricularRepository.save(notasAreaCurricular);
+        actualizada.setNombrePlanAcad(obtenerPlanAcad(actualizada.getIdPlanAcademico()));
 
-        notasCurrilarActualizada.setNombrePlanAcad(obtenerPlanAcad(notasAreaCurricular.getIdPlanAcademico()));
+        if (actualizada.getCursosNotas() != null) {
+            actualizada.getCursosNotas().forEach(notaCurso ->
+                    notaCurso.setNombreCurso(obtenerNombreCurso(notaCurso.getIdCurso()))
+            );
+        }
 
-        return notasAreaCurricular;
+        if (actualizada.getNotasCompetencias() != null) {
+            actualizada.getNotasCompetencias().forEach(cursoCompetencia ->
+                    cursoCompetencia.setNombreCompetencia(obtenerNombreCompetencia(cursoCompetencia.getIdCompetenciaCurso()))
+            );
+        }
+
+        return actualizada;
     }
 
     @Override
@@ -55,8 +98,19 @@ public class NotasAreaCurricularServiceImpl implements NotasAreaCurricularServic
         Optional<NotasAreaCurricular> libretaOptional = notasAreaCurricularRepository.findById(id);
         if (libretaOptional.isPresent()) {
             NotasAreaCurricular notasAreaCurricular = libretaOptional.get();
-
             notasAreaCurricular.setNombrePlanAcad(obtenerPlanAcad(notasAreaCurricular.getIdPlanAcademico()));
+
+            if (notasAreaCurricular.getCursosNotas() != null) {
+                notasAreaCurricular.getCursosNotas().forEach(notaCurso ->
+                        notaCurso.setNombreCurso(obtenerNombreCurso(notaCurso.getIdCurso()))
+                );
+            }
+
+            if (notasAreaCurricular.getNotasCompetencias() != null) {
+                notasAreaCurricular.getNotasCompetencias().forEach(cursoCompetencia ->
+                        cursoCompetencia.setNombreCompetencia(obtenerNombreCompetencia(cursoCompetencia.getIdCompetenciaCurso()))
+                );
+            }
 
             return Optional.of(notasAreaCurricular);
         }
@@ -68,17 +122,35 @@ public class NotasAreaCurricularServiceImpl implements NotasAreaCurricularServic
         notasAreaCurricularRepository.deleteById(id);
     }
 
-
     private String obtenerPlanAcad(Integer idNotasCompetencia) {
         try {
             PlanAcademicoDto planAcademicoDto = planAcademicoFeing.buscarPlanAcademico(idNotasCompetencia).getBody();
             if (planAcademicoDto != null) {
-                return  planAcademicoDto.getNombrePlan();
+                return planAcademicoDto.getNombrePlan();
             }
         } catch (Exception e) {
-            return "Docente no encontrado";
+            return "Plan académico no encontrado";
         }
         return null;
     }
 
+    private String obtenerNombreCurso(Integer idCurso) {
+        try {
+            CursoDto cursoDto = cursoFeing.buscarCurso(idCurso).getBody();
+            if (cursoDto != null) return cursoDto.getNombre();
+        } catch (Exception e) {
+            return "Curso no encontrado";
+        }
+        return null;
+    }
+
+    private String obtenerNombreCompetencia(Integer idCompetenciaCurso) {
+        try {
+            CompetenciaDto competenciaDto = competenciaFeing.buscarCompetencia(idCompetenciaCurso).getBody();
+            if (competenciaDto != null) return competenciaDto.getNombreCompetencia();
+        } catch (Exception e) {
+            return "Competencia no encontrada";
+        }
+        return null;
+    }
 }

@@ -32,9 +32,22 @@ public class NotasAreaCurricularController {
 
     @PostMapping
     public ResponseEntity<NotasAreaCurricular> guardar(@RequestBody NotasAreaCurricular notasAreaCurricular) {
+        System.out.println("Cursos recibidos:");
+        if (notasAreaCurricular.getCursosNotas() != null) {
+            notasAreaCurricular.getCursosNotas().forEach(nc ->
+                    System.out.println("Curso ID: " + nc.getIdCurso() + ", Nota: " + nc.getNota())
+            );
+        }
+
+        System.out.println("Competencias recibidas:");
+        if (notasAreaCurricular.getNotasCompetencias() != null) {
+            notasAreaCurricular.getNotasCompetencias().forEach(comp ->
+                    System.out.println("CompetenciaCurso ID: " + comp.getIdCompetenciaCurso() + ", Nota: " + comp.getNota())
+            );
+        }
 
         NotasAreaCurricular nuevaNota = notasAreaCurricularService.guardar(notasAreaCurricular);
-        return ResponseEntity.status(HttpStatus.CREATED).body(nuevaNota); // Código 201 Created para POST
+        return ResponseEntity.status(HttpStatus.CREATED).body(nuevaNota);
     }
 
     @PutMapping("/{id}")
